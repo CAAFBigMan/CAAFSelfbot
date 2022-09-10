@@ -5,4 +5,6 @@ HOW TO SET UP!:
 -------------------------------------------
 If there are any errors contact me or gaf!
 -------------------------------------------
-works best in repl!
+Works best in repl!
+-------------------------
+Skid if have 500TB of CP
