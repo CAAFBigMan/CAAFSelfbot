@@ -13,7 +13,7 @@ status = input(f'status:')
 headers = {'Authorization': f'{token}'}
 prefix = "$"
 thugz = commands.Bot(command_prefix=prefix, self_bot=True, help_command=None)
-
+# you can do Watching for the ActivityType by changing playing for watching
 @thugz.event
 async def on_connect():
   await thugz.change_presence(activity=discord.Activity(type=discord.ActivityType.playing,name=f'{status}'))
