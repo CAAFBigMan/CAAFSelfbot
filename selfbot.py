@@ -13,7 +13,7 @@ status = input(f'status:')
 headers = {'Authorization': f'{token}'}
 prefix = "$"
 thugz = commands.Bot(command_prefix=prefix, self_bot=True, help_command=None)
-# you can do Watching or Streaming or Game or Activity for the ActivityType by changing playing for any of those 4
+# you can do Watching or Streaming or Game or Playing for the ActivityType by changing playing for any of those 4
 @thugz.event
 async def on_connect():
   await thugz.change_presence(activity=discord.Activity(type=discord.ActivityType.watching,name=f'{status}'))
