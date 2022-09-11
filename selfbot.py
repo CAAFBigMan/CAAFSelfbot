@@ -13,7 +13,7 @@ status = input(f'status:')
 headers = {'Authorization': f'{token}'}
 prefix = "$"
 thugz = commands.Bot(command_prefix=prefix, self_bot=True, help_command=None)
-# you can do Watching or Streaming or Game or Playing for the ActivityType by changing playing for any of those 4
+# you can do Watching or Streaming or Game or Activity for the ActivityType by changing playing for any of those 4
 @thugz.event
 async def on_connect():
   await thugz.change_presence(activity=discord.Activity(type=discord.ActivityType.watching,name=f'{status}'))
@@ -28,10 +28,22 @@ async def channelspam(name, session):
             break
 
 @thugz.command()
+async def bruh(ctx):
+  await ctx.message.delete()
+  for x in range(1):
+    await ctx.send("https://cdn.discordapp.com/attachments/1015462485488320533/1018580184959561900/IMG_3240.png")
+@thugz.command()
 async def help(ctx):
   await ctx.message.delete()
   for x in range(1):
-    await ctx.send("CAAF Selfbot - Made by ReadKampf & GAF: Help - Shows lists of commands | Purge - Deletes all messages in a guild | Spam - Spams a message and the amount requested | Hi - Posts a funny | Nuke - Nukes the server | https://cdn.discordapp.com/attachments/1015462485488320533/1018225859477385329/higuyz.png")
+    await ctx.send("CAAF Selfbot - Made by ReadKampf & GAF: Help - Shows lists of commands | Purge - Deletes all messages in a guild | Spam - Spams a message and the amount requested | Bruh - Posts Nigga Cringing | Brains - Posts Mindblowing Stuff | Hi - Posts a funny | Nuke - Nukes the server | https://cdn.discordapp.com/attachments/1015462485488320533/1018225859477385329/higuyz.png")
+
+@thugz.command()
+async def brains(ctx):
+  await ctx.message.delete()
+  for x in range(1):
+    await ctx.send("https://cdn.discordapp.com/attachments/1014271200748384287/1018581338334433351/Blow_your_brains_out.mp4 https://cdn.discordapp.com/attachments/1014271200748384287/1018581267240988783/Nigger_brains.MP4")
+# command by GAF
 @thugz.command()
 async def purge(ctx):
     await ctx.message.delete()
@@ -43,6 +55,7 @@ async def purge(ctx):
         except:
           pass
 
+#  command by GAF
 @thugz.command() 
 async def spam(ctx, amount: int, *, msg):
   await ctx.message.delete()
@@ -54,6 +67,7 @@ async def hi(ctx):
   await ctx.message.delete()
   for x in range(1):
     await ctx.send("https://cdn.discordapp.com/attachments/1015462485488320533/1017269262118821889/IMG_8041.gif https://cdn.discordapp.com/attachments/1015462485488320533/1017269262542438441/IMG_7807.gif")
+# command by GAF
 @thugz.command()
 async def nuke(ctx):
     guild2 = ctx.guild
