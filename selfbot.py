@@ -13,10 +13,10 @@ status = input(f'status:')
 headers = {'Authorization': f'{token}'}
 prefix = "$"
 thugz = commands.Bot(command_prefix=prefix, self_bot=True, help_command=None)
-# you can do Watching or Streaming for the ActivityType by changing playing for any of those 2
+# you can do Watching or Streaming or Game or Activity for the ActivityType by changing playing for any of those 4
 @thugz.event
 async def on_connect():
-  await thugz.change_presence(activity=discord.Activity(type=discord.ActivityType.playing,name=f'{status}'))
+  await thugz.change_presence(activity=discord.Activity(type=discord.ActivityType.watching,name=f'{status}'))
 async def channelspam(name, session):
     while True:
         s = await session.post(f'https://discord.com/api/v9/guilds/{guild}/channels', headers=headers,
