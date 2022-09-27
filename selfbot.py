@@ -8,7 +8,7 @@ import httpx
 from tasksio import TaskPool
 from discord.ext import commands
 
-os.system('pip install discord==1.7.3 requests httpx tasksio TaskPool asyncio')
+os.system('pip install discord==1.7.3 discord.py==1.7.3 requests httpx tasksio TaskPool asyncio')
 
 channel_names = ["dreamybullxxx", "cum"]
 token = input(f'token:')
